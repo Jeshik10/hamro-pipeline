@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "=== STARTING POST-DEPLOY SCRIPT ==="
 echo "Current directory: $(pwd)"
-echo "Contents of /var/www/html/scripts/:"
+echo "Contents of /var/www/html/script/:"
 ls -la /var/www/html/script/
 
 # Restart Apache
