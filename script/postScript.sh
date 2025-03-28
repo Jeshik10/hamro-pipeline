@@ -1,6 +1,10 @@
 #!/bin/bash
-# Fix permissions
-chown -R apache:apache /var/www/html
-chmod -R 755 /var/www/html
+echo "=== STARTING POST-DEPLOY SCRIPT ==="
+echo "Current directory: $(pwd)"
+echo "Contents of /var/www/html/scripts/:"
+ls -la /var/www/html/scripts/
+
 # Restart Apache
-systemctl restart httpd
+sudo systemctl restart httpd
+echo "Apache status: $(systemctl status httpd)"
+echo "=== SCRIPT COMPLETED ==="
